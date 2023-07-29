@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <title>Fénix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="brand__container">
+                <div class="logo"></div>
+                <div class="header__title">
+                    <h1>Fénix Studio</h1>
+                    <h3>Renace la fotografía</h3>
+                </div>
+            </div>
+            <div class="nav-list-container" id="nav-list-container"></div>
+                <ul id="nav-list">
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="./howBuy.html">¿Cómo Cómprar?</a></li>
+                    <li><a href="./distributedBrands.html">Marcas Distibuídas</a></li>
+                    <li><a href="./paymentsTransfers.html">Pagos y Transferencias</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="product__section">
+            <h2 class="product-title">Profoto B10X Set 2 unidades</h2>
+            <img class="product-image" src="../img/901194_a_b10x_duo.jfifX2.jfif" alt="Profoto B10X Set 2 unidades">
+            <p class="product-review"><span>Reseña: </span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur vel, doloribus optio consectetur dolorum molestiae, dolor quisquam ipsum odio expedita consequuntur recusandae necessitatibus ex aspernatur doloremque assumenda eius. Earum, debitis.
+            Nemo inventore odio aliquam, modi iste eius exercitationem quo quis architecto error facere assumenda odit expedita, quae tempora alias obcaecati reiciendis rem quibusdam eos velit dignissimos amet perferendis! Labore, quidem.</p>
+                <p class="product-detail">Ambos B10X son multiusos. Esto significa que, independientemente de si capturas un vídeo o una fotografía, tanto el B10X como el B10X Plus se adaptarán sin problemas. Además, incluyen características útiles como el aumento de potencia de luz continua de 2500 lm a 3500 lm en comparación con el B10 y el B10 Plus. Esto supone un incremento del 40%. Tanto el B10X como el B10X Plus presentan velocidades de reciclado más rápidas que las de sus predecesores.  Los B10X son muy fáciles de utilizar desde el primer momento gracias a sus interfaces claras e intuitivas. Solo hay que centrarse en crear imágenes y no en los ajustes. La Profoto app permite ver y controlar fácilmente todos los ajustes en la palma de la mano, así como instalar nuevas actualizaciones en cuestión de segundos.Ambos flashes incluyen AirX, la tecnología Bluetooth de Profoto. Por tanto, también puedes aprovechar toda la potencia del B10X y del B10X Plus cuando captures con tu smartphone. Esto te permite capturar, editar y publicar con el mismo dispositivo. De este modo, se reduce considerablemente el tiempo desde el concepto creativo hasta la imagen publicada. Podrás acceder a una amplia variedad de posibilidades de modelado de la luz mediante la gama de modificadores OCF, ligeros y fáciles de usar, y otras más de 120 herramientas de modelado de la luz de Profoto.</p>
+                <p class="product-price">$2.199.990 </p>
+                <p class="product-discount">15% de descuento por compra sobre las dos unidades</p>
+    </section>   
+
+
+    <script>
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            var navList = document.getElementById("nav-list");
+            if (navList.classList.contains("active")) {
+                navList.classList.remove("active");
+            } else {
+                navList.classList.add("active");
+            }
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuToggle = document.getElementById("mobile-menu");
+            var navListContainer = document.getElementById("nav-list-container");
+
+            menuToggle.addEventListener("click", function() {
+                if (navListContainer.classList.contains("active")) {
+                    navListContainer.classList.remove("active");
+                    navListContainer.style.display = "none";
+                } else {
+                    navListContainer.classList.add("active");
+                    navListContainer.style.display = "block";
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

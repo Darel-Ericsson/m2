@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <title>Fénix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="brand__container">
+                <div class="logo"></div>
+                <div class="header__title">
+                    <h1>Fénix Studio</h1>
+                    <h3>Renace la fotografía</h3>
+                </div>
+            </div>
+            <div class="nav-list-container" id="nav-list-container"></div>
+                <ul id="nav-list">
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="./howBuy.html">¿Cómo Cómprar?</a></li>
+                    <li><a href="./distributedBrands.html">Marcas Distibuídas</a></li>
+                    <li><a href="./paymentsTransfers.html">Pagos y Transferencias</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="buy__section">
+            <div class="buy__content">
+                <div class="instrucciones">
+                    <h2>Cómo comprar</h2>
+                    <p>Para coordinar la compra y asegurar el stock para compras de varias unidades debe seguir las instrucciones: </p>
+                    <ol>
+                        <li>Debe completar el siguiente formulario, asegurerse de ingresar los datos de forma correcta y completa</li>
+                        <li>Nos contactaremos con usted desde el correo ventas@fotofenix.com, Foto Fénix no se contactará con ningúna otra dirección correo, incluso de la misma compañia, para tratar ventas</li>
+                        <li>Una vez confirmado el stock del producto meidiante un correo desde ventas@fotofenix.com, se le entregará un codigo de compra que debe adjuntar como comentario en la trasferencia o a  través de nuestra pasaréla de pago cuandos se le solicite</li>
+                        <li>Confrimada la compra se hará envío del pedido, recibirá un correo desde ventas@fotofenix.com con el código y las instrucciones para realizar el seguimiento del pedido</li>
+                    </ol>
+                </div>
+                <div class="form__container">
+                    <form action="#" method="#">
+                        <fieldset>
+                            <legend>Datos Personales</legend>
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" placeholder="ej: Juan Pedro Pérez Soto">
+                            <label for="phone">Número de teléfono</label>
+                            <input type="number" id="phone" name="phone" placeholder="999112233 o 2212334">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" name="email" id="email" placeholder="contacto@fotofenix.com">
+                            <label for="address">Dirección</label>
+                            <input type="text" id="address" name="address" placeholder="Av Carlos Condell 1687 Quillota Valparaíso">    
+                        </fieldset>
+                        <fieldset>
+                            <legend>Pedidos</legend>
+                            <label for="order">Solicitud de Productos</label>
+                            <textarea name="order" id="order" cols="30" rows="10" placeholder="Escriba su pedio aquí, anote los código y cantidad de unidades deseadas"></textarea>
+                            <input type="submit" value="Enviar" class="submit">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.6525177838716!2d-71.24528907136963!3d-32.89676177821409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d27b8ccfb0fd%3A0xd5874354ea38de4d!2sMall%20Shopping%20Center%20Quillota!5e0!3m2!1ses!2scl!4v1684769970629!5m2!1ses!2scl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Av Carlos Condell 1687, Mall Shopping Center Quillota, local B-42, Quillota, Valparaíso, Chile</p>
+            <a href="mailto:contacto@fotofenix.com">Email: contacto@fotofenix.com</a>
+            <a href="https://drive.google.com/file/d/1GFuOFd23D8JOjVmNAS_Dm2SgG0cRa2NX/view?usp=sharing" target="_blank"><button>Descarga nuestro dossier informativo</button></a>
+        </div>
+        <div class="social__Media">
+            <a href="www.facebook.com" target="_blank"><img src="../img/icon-facebook.svg" alt="Logo de Facebook"></a>
+            <a href="www.instagram.com" target="_blank"><img src="../img/icon-instagram.svg" alt="Logo de Instagram"></a>
+            <a href="www.youtube.com" target="_blank"><img src="../img/icon-youtube.svg" alt="Logo de Youtube"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            var navList = document.getElementById("nav-list");
+            if (navList.classList.contains("active")) {
+                navList.classList.remove("active");
+            } else {
+                navList.classList.add("active");
+            }
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuToggle = document.getElementById("mobile-menu");
+            var navListContainer = document.getElementById("nav-list-container");
+
+            menuToggle.addEventListener("click", function() {
+                if (navListContainer.classList.contains("active")) {
+                    navListContainer.classList.remove("active");
+                    navListContainer.style.display = "none";
+                } else {
+                    navListContainer.classList.add("active");
+                    navListContainer.style.display = "block";
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
