@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function sumaNumero(elemento, valor) {
+    inputValue = parseInt(document.getElementById(elemento).value)
+    document.getElementById(elemento).value = inputValue + valor;
+}
+
 function login_usuario() {
     var usuario = document.getElementById("login_usuario").value;
     var pass = document.getElementById("login_pass").value;
@@ -34,3 +39,6 @@ function login_usuario() {
       document.getElementById("login_pass").value = "";
     }
   }
+
+/********************************************** */
+const cartInfo = document.querySelector('.cart-product')

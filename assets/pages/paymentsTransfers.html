@@ -60,36 +60,7 @@
         </div>
     </footer>
 
-
-    <script>
-        document.getElementById("mobile-menu").addEventListener("click", function () {
-            var navList = document.getElementById("nav-list");
-            if (navList.classList.contains("active")) {
-                navList.classList.remove("active");
-            } else {
-                navList.classList.add("active");
-            }
-        });
-
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-            var menuToggle = document.getElementById("mobile-menu");
-            var navListContainer = document.getElementById("nav-list-container");
-
-            menuToggle.addEventListener("click", function() {
-                if (navListContainer.classList.contains("active")) {
-                    navListContainer.classList.remove("active");
-                    navListContainer.style.display = "none";
-                } else {
-                    navListContainer.classList.add("active");
-                    navListContainer.style.display = "block";
-                }
-            });
-        });
-
-    </script>
-
+<script src="/assets/js/logica.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>

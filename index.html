@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,29 +38,24 @@
     <div class="index-content">
         <h1>Productos en stock</h1>
         <main>
-            <div class="products-grid">
+            <div class="producto-1">
                 <a href="./assets/pages/prdct1.html" class="producto-card">
                     <img src="./assets/img/Primary_Image-2.webp" alt="CÁMARA REFLEX ILCE-7M3K">
                     <h2>CÁMARA REFLEX ILCE-7M3K</h2>
                     
                     <p>Código: prdct1</p>
                     <p>Precio: $1.709.990</p>
-                    <div
-                            class="botonesProductos d-flex justify-content-center">
-                            <button
-                                onclick="restar_producto('valor_input1', '1', '300000')">-</button>
-                            <input id="valor_input1" type="number" value="0">
-                            <button
-                                onclick="agregar_producto('valor_input1', '1', '300000' )">+</button>
-                        </div>
+                 
                 </a>
-                <a href="./assets/pages/prdct2.html" class="producto-card">
+            <div class="item"
+                href="./assets/pages/prdct2.html" class="producto-card">
                     <img src="./assets/img/388078-1200-auto.webp" alt="CÁMARA SONY A6100 + LENTE 16-50MM">
                     <h2>CÁMARA SONY A6100 + LENTE 16-50MM</h2>
                     
                     <p>Código: prdct2</p>
                     <p>Precio: $744.790</p>
-                </a>
+                
+            </div>
                 <a href="./assets/pages/prdct3.html" class="producto-card">
                     <img src="./assets/img/392490-1200-auto.webp" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
                     <h2>CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h2>
@@ -137,5 +133,229 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <script src="/assets/js/logica.js"></script>
 </body>
-</html>
+</html> -->
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/style/style.css"> -->
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Fénix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="brand__container">
+                <div class="logo"></div>
+                <div class="header__title">
+                    <h1>Fénix Studio</h1>
+                    <h3>Renace la fotografía</h3>
+                </div>
+            </div>
+            <div class="nav-list-container" id="nav-list-container"></div>
+                <ul id="nav-list">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="./assets/pages/howBuy.html">¿Cómo Cómprar?</a></li>
+                    <li><a href="./assets/pages/distributedBrands.html">Marcas Distibuídas</a></li>
+                    <li><a href="./assets/pages/paymentsTransfers.html">Pagos y Transferencias</a></li>
+                    <li><a href="./assets/pages/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Offcanvas navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
+
+
+
+
+
+
+
+    </header>
+        <h1>Productos en stock</h1>  
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">                        
+                            <div class="card-body">
+                                <img src="./assets/img/Primary_Image-2.webp" class="card-img-top img-fluid m-3" alt="CÁMARA REFLEX ILCE-7M3K" >
+                                <h5 class="card-title">CÁMARA REFLEX ILCE-7M3K</h5>
+                                <p class="card-text">Código: prdct1</p>
+                                <p class="card-text">Precio: $1.709.990</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct1.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col">
+                    <div class="card m-4">
+                        <img src="./assets/img/388078-1200-auto.webp" class="card-img-top" alt="CÁMARA SONY A6100 + LENTE 16-50MM" >
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA SONY A6100 + LENTE 16-50MM</h5>
+                                <p class="card-text">Código: prdct2</p>
+                                <p class="card-text">Precio: $744.790</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct2.html" class="btn btn-primary">Ver más</a>
+                            </div>      
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top img-fluid m-3" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/392490-1200-auto.webp" class="card-img-top" alt="CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM">
+                            <div class="card-body">
+                                <h5 class="card-title">CÁMARA FUJIFILM X-T5 BLACK + LENTE XF 18-55MM</h5>
+                                <p class="card-text">Código: prdct3</p>
+                                <p class="card-text">Precio: $2.265.402</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="./assets/pages/prdct3.html" class="btn btn-primary">Ver más</a>
+                            </div>
+                    </div>
+                </div>
+                <!-- Agrega más cards para los demás productos -->
+            </div>
+        </div>
+ 
+    <footer>
+        <!-- Tu contenido del pie de página aquí -->
+    </footer>   
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="/assets/js/logica.js"></script>
+</body>
+</html>
