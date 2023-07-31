@@ -23,15 +23,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function sumaNumero(elemento, valor) {
+function modificarCantidad(elemento, valor) {
     inputValue = parseInt(document.getElementById(elemento).value)
-    document.getElementById(elemento).value = inputValue + valor;
+    max = document.getElementById(elemento).max
+    min = document.getElementById(elemento).min
+    if ((inputValue + valor) >= min && (inputValue + valor) <= max) {
+        document.getElementById(elemento).value = inputValue + valor;
+    }
 }
 
 function login_usuario() {
     var usuario = document.getElementById("login_usuario").value;
     var pass = document.getElementById("login_pass").value;
-  
+
     if (usuario === pass && usuario.length > 0) {
       window.open("index.html");
     } else {

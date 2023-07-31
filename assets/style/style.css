@@ -666,13 +666,9 @@ footer {
         gap: 20px;
     }
 
-
-    
     .buy__content {
         grid-template-columns: 1fr;
     }
-
-
 
     .contact__container {
         grid-template-columns: 1fr 1fr;
@@ -785,7 +781,7 @@ footer {
     .header__title h1 {
         font-size: 2vh;
     }
-    
+
     .header__title h3 {
         font-size: 1.5vh;
     }
@@ -850,10 +846,10 @@ footer {
         font-size: 2.7rem;
     }
 
-    
-    
 
-    
+
+
+
 
     /* Pagina Como comprar y pagos y transferencias */
 

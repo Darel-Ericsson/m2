@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="../style/navbar.css">
     <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Fénix</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="brand__container">
-                <div class="logo"></div>
-                <div class="header__title">
-                    <h1>Fénix Studio</h1>
-                    <h3>Renace la fotografía</h3>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-darky">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+              <div class="d-flex align-items-center">
+                <div class="bg-image"></div>
+                <div class="ms-2">
+                  <h1 class="mb-0">Fénix Studio</h1>
+                  <p class="mb-0">Renace la fotografía</p>
                 </div>
+              </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./howBuy.html">¿Cómo Cómprar?</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./distributedBrands.html">Marcas Distibuídas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./paymentsTransfers.html">Pagos y Transferencias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contacto</a>
+                </li>
+              </ul>
             </div>
-            <div class="nav-list-container" id="nav-list-container"></div>
-                <ul id="nav-list">
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li><a href="./howBuy.html">¿Cómo Cómprar?</a></li>
-                    <li><a href="./distributedBrands.html">Marcas Distibuídas</a></li>
-                    <li><a href="./paymentsTransfers.html">Pagos y Transferencias</a></li>
-                    <li><a href="./contact.html">Contacto</a></li>
-                </ul>
-            </div>
+          </div>
         </nav>
-    </header>
+      </header>
     <main class="contact__container">
         <form action="#" method="#" class="contact__form">
             <fieldset>
