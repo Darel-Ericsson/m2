@@ -1,0 +1,5 @@
+.card:hover {
+
+    border-color: #ce6b11; 
+    border-inline: 0.1rem solid #ce6b11 ;
+}
