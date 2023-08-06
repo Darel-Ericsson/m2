@@ -105,6 +105,7 @@ function desplegarProuctos() {
 
             const detailsElement = document.createElement('details');
             const summaryElement = document.createElement('summary');
+            
             summaryElement.textContent = cardTitle;
             detailsElement.appendChild(summaryElement);
 

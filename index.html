@@ -412,8 +412,8 @@
     </div>
 
     
-    <div class="floating-container">
-        <button class="floating-button" id="botonCarrito" data-bs-toggle="modal" data-bs-target="#listaCompra" onclick="desplegarProuctos()">
+    <div class="floating-container" >
+        <button class="floating-button" id="botonCarrito" data-bs-toggle="modal" data-bs-target="#listaCompra" onclick="desplegarProuctos()" style="display: none;">
             <span id="contador" class="button__badge" style="display: none;">0</span>
             <i class="material-icons" >shopping_cart</i>
         </button>
@@ -426,7 +426,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="listaCompraLabel">Carrito de compras</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="resetList()"></button>
         </div>
         <div class="modal-body">
           <div id="listaProd">
