@@ -66,9 +66,73 @@ function contarProductos() {
     icono.textContent = cont
     if (cont > 0){
         contador.style.display = "block";
+        document.getElementById("botonCarrito").style.display='';
     } else {
         contador.style.display = "none";
+        document.getElementById("botonCarrito").style.display='none';
+
     }
+}
+
+function resetList() {
+    document.querySelector('#listaProd').innerHTML = '';
+}
+
+function desplegarProuctos() {
+    const productCards = document.querySelectorAll('.card-producto');
+    const cardContainer = document.createElement('div');
+    var cantidadesProds = document.getElementsByName("qty");
+    var indicesCard = [];
+
+    var addToCartBtn = document.getElementsByName('addToCartBtn');
+    for(var i=0;i<addToCartBtn.length;i++){
+        if(addToCartBtn[i].classList.contains('btn-danger'))
+            indicesCard.push(i);
+    }
+
+    indicesCard.forEach(i=>{
+        if (i<productCards.length) {
+            const clone = productCards[i].cloneNode(true);
+            cardTitle = clone.querySelector('.card-title').textContent;
+            clone.querySelector('.card-title').remove();
+            qtyLabel = "".concat("<p class='mb-0'><span>Cantidad: </span>", cantidadesProds[i].value, "</p>")
+            priceLabel = clone.querySelector('.precio').textContent;
+            if (priceLabel) {
+                subtotal = (parseFloat(priceLabel.replace('$','').replace('.',''))) * parseInt(cantidadesProds[i].value);
+                clpSubtotal = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(subtotal)
+                subtotalLabel = "".concat("<p class='mb-5'><span>Subtotal: </span>", clpSubtotal, "</p>");
+            }
+
+            const detailsElement = document.createElement('details');
+            const summaryElement = document.createElement('summary');
+            summaryElement.textContent = cardTitle;
+            detailsElement.appendChild(summaryElement);
+
+            clone.querySelectorAll('a').forEach(link => {link.removeAttribute('href');})
+
+            detailsElement.appendChild(clone);
+            cardContainer.appendChild(detailsElement);
+
+            cardContainer.insertAdjacentHTML('beforeend', qtyLabel);
+            cardContainer.insertAdjacentHTML('beforeend', subtotalLabel);
+
+            
+        }
+
+
+        
+    })
+    document.querySelector('#listaProd').appendChild(cardContainer);
+
+    // icono.textContent = cont
+    // if (cont > 0){
+    //     contador.style.display = "block";
+    //     document.getElementById("botonCarrito").style.display='';
+    // } else {
+    //     contador.style.display = "none";
+    //     document.getElementById("botonCarrito").style.display='none';
+
+    // }
 }
 
 function agregarBtn(idBoton, idCant){
@@ -102,5 +166,10 @@ function login_usuario() {
     }
   }
 
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
+  
+
+  
 /********************************************** */
 const cartInfo = document.querySelector('.cart-product')
