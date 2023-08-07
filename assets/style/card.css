@@ -8,6 +8,10 @@
 
 }
 
+.card-producto {
+    position: relative;
+    height: 100%;
+}
 
 .card-text {
     color: black;
@@ -28,3 +32,41 @@
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
     
 }
+
+
+.card-price {
+
+    margin-bottom: 5px;
+}
+.card-code {
+    margin-bottom: 0px;
+}
+
+
+.card-details {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 5px;
+}
+
+
+.card-title {
+    margin-bottom: 15px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+
+/* .marquee {
+    animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
