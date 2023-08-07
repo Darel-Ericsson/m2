@@ -17,11 +17,11 @@
 <body class="bg-secondary-subtle">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-darky">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <div class="d-flex align-items-center">
                         <div class="bg-image"></div>
-                        <div class="ms-2">
+                        <div class="brand-title ms-2">
                             <h1 class="mb-0">Fénix Studio</h1>
                             <p class="mb-0">Renace la fotografía</p>
                         </div>
@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link selected" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./assets/pages/howBuy.html">¿Cómo Cómprar?</a>
@@ -413,8 +413,8 @@
 
     
     <div class="floating-container" >
-        <button class="floating-button" id="botonCarrito" data-bs-toggle="modal" data-bs-target="#listaCompra" onclick="desplegarProuctos()" style="display: none;">
-            <span id="contador" class="button__badge" style="display: none;">0</span>
+        <button class="floating-button hidden" id="botonCarrito" data-bs-toggle="modal" data-bs-target="#listaCompra" onclick="desplegarProuctos()" style="display: none;">
+            <span id="contador" class="button__badge" >0</span>
             <i class="material-icons" >shopping_cart</i>
         </button>
     </div>
@@ -433,9 +433,12 @@
             
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer d-flex">
+            <p class="p-2 flex-fill">Total: <span id="precioTotal"></span></p>
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" onclick="resetList()">Cancelar</button>
-          <button type="button" class="btn btn-success">Ir al Pago</button>
+          <a href="./assets/pages/despacho.html">
+            <button type="button" class="btn btn-success">Ir al Pago</button>
+          </a>
         </div>
       </div>
     </div>

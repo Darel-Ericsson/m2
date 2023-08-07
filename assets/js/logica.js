@@ -65,11 +65,15 @@ function contarProductos() {
     }
     icono.textContent = cont
     if (cont > 0){
-        contador.style.display = "block";
+        
         document.getElementById("botonCarrito").style.display='';
+        document.getElementById("botonCarrito").classList.remove('blur-out')
+        document.getElementById("botonCarrito").classList.add('blur-in')
+        
     } else {
-        contador.style.display = "none";
-        document.getElementById("botonCarrito").style.display='none';
+        document.getElementById("botonCarrito").classList.remove('blur-in')
+        document.getElementById("botonCarrito").classList.add('blur-out')
+        
 
     }
 }
@@ -83,6 +87,7 @@ function desplegarProuctos() {
     const cardContainer = document.createElement('div');
     var cantidadesProds = document.getElementsByName("qty");
     var indicesCard = [];
+    var precioTotal = 0;
 
     var addToCartBtn = document.getElementsByName('addToCartBtn');
     for(var i=0;i<addToCartBtn.length;i++){
@@ -99,6 +104,7 @@ function desplegarProuctos() {
             priceLabel = clone.querySelector('.precio').textContent;
             if (priceLabel) {
                 subtotal = (parseFloat(priceLabel.replace('$','').replace('.',''))) * parseInt(cantidadesProds[i].value);
+                precioTotal += subtotal;
                 clpSubtotal = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(subtotal)
                 subtotalLabel = "".concat("<p class='mb-5'><span>Subtotal: </span>", clpSubtotal, "</p>");
             }
@@ -123,17 +129,10 @@ function desplegarProuctos() {
 
         
     })
+    clpTotal = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(precioTotal)
     document.querySelector('#listaProd').appendChild(cardContainer);
+    document.querySelector('#precioTotal').textContent = clpTotal;
 
-    // icono.textContent = cont
-    // if (cont > 0){
-    //     contador.style.display = "block";
-    //     document.getElementById("botonCarrito").style.display='';
-    // } else {
-    //     contador.style.display = "none";
-    //     document.getElementById("botonCarrito").style.display='none';
-
-    // }
 }
 
 function agregarBtn(idBoton, idCant){
