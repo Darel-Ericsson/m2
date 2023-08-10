@@ -178,6 +178,58 @@ const cartInfo = document.querySelector('.cart-product')
 
 
 
+
+
+    document.getElementById('purchase-button').addEventListener('click', function (event) {
+        
+        
+        var formulario = document.getElementById('form-despacho');
+        var camposLlenos = true;
+        console.log(formulario.elements);
+
+        var elementosFormulario = formulario.querySelectorAll('input, select, textarea');
+        for (var i = 0; i < elementosFormulario.length; i++) {
+            if (elementosFormulario[i].value === '') {
+                console.log(elementosFormulario[i]);
+                camposLlenos = false;
+                console.log("break");
+                break;
+            }
+        }
+
+        if (camposLlenos) {
+            console.log("xDDDDDDDDD")
+            $('#pagorealizado').modal('show');
+        } else {
+            console.log("noooo")
+        }
+    });
+
+
+
+// document.getElementById('form-despacho').addEventListener('submit', function (event) {
+//     var formulario = event.target;
+//     var camposLlenos = true;
+    
+//     // Verificar si los campos están llenos
+//     for (var i = 0; i < formulario.elements.length; i++) {
+//         if (formulario.elements[i].value === '') {
+//             camposLlenos = false;
+//             break;
+//         }
+//     }
+
+//     if (!camposLlenos) {
+//         // Evitar que se envíe el formulario
+//         event.preventDefault();
+//     } else {
+//         $('#pagorealizado').modal('show');
+//     }
+// });
+
+
+
+
 document.getElementById("purchase-button").addEventListener("click", function() {
     setTimeout(function() {
       window.location.href = "../../index.html"; // Cambia "nueva_pagina.html" por la URL de la página a la que deseas redirigir

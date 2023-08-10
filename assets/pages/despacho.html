@@ -12,6 +12,7 @@
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Fénix</title>
   </head>
   <body class="d-flex flex-column min-vh-100 ">
@@ -53,79 +54,82 @@
     <main id="buyfondo" class="flex-grow-1 d-flex justify-content-center align-items-center">
       <div class="row text-bg-black">
        
-        <div class=" ">
-          <div class="container formulario">
-            <h5 class="card-title">Datos para despacho</h5>
+        <h3 class="card-title">Datos para despacho</h3>
+        <form class="form" id="form-despacho">
+          
             <br>
             
-            <h5 class="card-title">Nombre Completo</h5>
-            <div class="form-floating mb-3">
-              <input class="form-control " id="floatingInputDisabled"
-                placeholder="Ingrese su nombre completo" required="">
-              <label for="floatingInputDisabled">Ingrese su nombre completo aquí</label>
-            </div>
-            <h5 class="card-title">Número de teléfono</h5>
-            <div class="form-floating mb-3">
-              <input class="form-control" type="number" placeholder="Ej: +56987654321"
-                id="floatingInputDisabled" required=""></input>
-              <label for="floatingInputDisabled">Ingrese su número de contacto
-                aquí</label>
-            </div>
-            <h5 class="card-title">Correo Electrónico</h5>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInputDisabled"
-                placeholder="name@example.com" required="">
-              <label for="floatingInputDisabled">Ingrese su correo electrónico</label>
-            </div>
-            <h5 class="card-title">Dirección</h5>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInputDisabled"
-                placeholder="name@example.com" required="">
-              <label for="floatingInputDisabled">Ingrese su dirección aquí</label>
-            </div>
-          </div>
-
-
-          <div class="container">
-            <div class="container">
-              <div class="row">
-                <div class="card-container">
-                  <div class="mastercard">
-                    <div class="logo"></div>
-                    <div class="name">masterplop</div>
-                  </div>
-                  <div class="card-details">
-                    <div class="card-number field">
-                      <label for="cn">Número de tarjeta</label>
-                      <input id="cn" type="text" />
-                    </div>
-                    <div class="card-name field">
-                      <label for="cna">Nombre en la tarjeta</label>
-                      <input id="cna" type="text" />
-                    </div>
-                    <div class="expires field">
-                      <label for="exp">Fecha Exp.</label>
-                      <input id="exp" type="text" />
-                      <br>
-                      <br>
-                    </div>
-                    <div class="cvc field">
-                      <label for="cvc">CVC</label>
-                      <input id="cvc" type="text" />
-                      <br>
-                      <br>
-                    </div>
-                   <div class="">
-                     <br>
-                   </div>
-                  </div>
-                  <button class="purchase-button" id="purchase-button" data-content="Comprar" data-bs-toggle="modal" data-bs-target="#pagorealizado">PURCHASE</button>
-                </div>
+            <div class="form-group">
+              <label class="card-title fw-semibold fs-5">Nombre Completo</label>
+              <div class="form-floating mb-3">
+                <input class="form-control " id="nombre" placeholder="Ingrese su nombre completo" required="" >
+                <label for="floatingInputDisabled">Ingrese su nombre completo aquí</label>
               </div>
             </div>
-          </div>
-        </div>
+
+            <div class="form-group">
+              <label class="card-title fw-semibold fs-5">Número de teléfono</label>
+              <div class="form-floating mb-3">
+                <input class="form-control" type="number" placeholder="Ej: +56987654321"
+                  id="telefono" required="" ></input>
+                <label for="floatingInputDisabled">Ingrese su número de contacto
+                  aquí</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="card-title fw-semibold fs-5">Correo Electrónico</label>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email"
+                  placeholder="name@example.com" required="" >
+                <label for="floatingInputDisabled">Ingrese su correo electrónico</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="card-title fw-semibold fs-5">Dirección</label>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="direccion"
+                  placeholder="Ingresa tu direccion aqui" required="" >
+                <label for="floatingInputDisabled">Ingrese su dirección aquí</label>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class="mastercard">
+                <div class="logo"></div>
+                <div class="name">masterplop</div>
+              </div>
+              <div class="card-details">
+                <div class="form-group card-number field">
+                  <label for="cn">Número de tarjeta</label>
+                  <input id="cn" type="text"  required>
+                </div>
+                <div class="form-group card-name field">
+                  <label for="cna">Nombre en la tarjeta</label>
+                  <input id="cna" type="text"  required>
+                </div>
+                <div class="form-group expires field">
+                  <label for="exp">Fecha Exp.</label>
+                  <input id="exp" type="text"  required>
+                  <br>
+                  <br>
+                </div>
+                <div class="form-group cvc field">
+                  <label for="cvc">CVC</label>
+                  <input id="cvc" type="text"  required>
+                  <br>
+                  <br>
+                </div>
+                <div class="">
+                  <br>
+                </div>
+              </div>
+              <button class="purchase-button" id="purchase-button" type="submit" data-content="Comprar" data-bs-toggle="modal" data-bs-target="#pagorealizado">PURCHASE</button>
+            </div>
+        </form>
       </div>
+
 
       <div class="modal fade" id="pagorealizado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pagorealizadoLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
@@ -161,7 +165,7 @@
               <div class="col-lg-6">
                   <a class="d-flex align-items-center mb-3 text-decoration-none" href="www.facebook.com"
                       target="_blank">
-                      <img class="d-block" src="../img/icon-facebook.svg" alt="Logo de Facebook" />
+                      <img class="d-block" src="../img/icon-facebook.svg" alt="Logo de Facebook" >
                       <span class="text-white ml-3" style="padding-left: 0.5rem">
                           /FenixStudio
                       </span>
@@ -169,7 +173,7 @@
 
                   <a class="d-flex align-items-center mb-3 text-decoration-none" href="www.instagram.com"
                       target="_blank">
-                      <img class="d-block" src="../img/icon-instagram.svg" alt="Logo de Instagram" />
+                      <img class="d-block" src="../img/icon-instagram.svg" alt="Logo de Instagram" >
                       <span class="text-white ml-3" style="padding-left: 0.5rem">
                           @fenixstudio
                       </span>
@@ -177,7 +181,7 @@
 
                   <a class="d-flex align-items-center mb-3 text-decoration-none" href="www.youtube.com"
                       target="_blank">
-                      <img class="d-block" src="../img/icon-youtube.svg" alt="Logo de Youtube" />
+                      <img class="d-block" src="../img/icon-youtube.svg" alt="Logo de Youtube" >
                       <span class="text-white ml-3" style="padding-left: 0.5rem">Fenix Studio
                       </span>
                   </a>
@@ -196,8 +200,10 @@
   </footer>
 
     
-
+  
     <script src="/assets/js/logica.js"></script>
+    
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
