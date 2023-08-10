@@ -161,7 +161,7 @@ function login_usuario() {
     var pass = document.getElementById("login_pass").value;
 
     if (usuario === pass && usuario.length > 0) {
-      window.open("index.html");
+      window.location.href = "index.html";
     } else {
       document.getElementById("login_usuario").value = "";
       document.getElementById("login_pass").value = "";
