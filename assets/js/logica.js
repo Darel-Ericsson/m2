@@ -102,8 +102,10 @@ function desplegarProuctos() {
             clone.querySelector('.card-title').remove();
             qtyLabel = "".concat("<p class='mb-0'><span>Cantidad: </span>", cantidadesProds[i].value, "</p>")
             priceLabel = clone.querySelector('.precio').textContent;
+            console.log(priceLabel)
             if (priceLabel) {
-                subtotal = (parseFloat(priceLabel.replace('$','').replace('.',''))) * parseInt(cantidadesProds[i].value);
+                subtotal = (parseInt(priceLabel.replace('$','').replace(/\./g, ""))) * parseInt(cantidadesProds[i].value);
+                console.log(subtotal)
                 precioTotal += subtotal;
                 clpSubtotal = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(subtotal)
                 subtotalLabel = "".concat("<p class='mb-5'><span>Subtotal: </span>", clpSubtotal, "</p>");
@@ -173,3 +175,12 @@ function login_usuario() {
   
 /********************************************** */
 const cartInfo = document.querySelector('.cart-product')
+
+
+
+document.getElementById("purchase-button").addEventListener("click", function() {
+    setTimeout(function() {
+      window.location.href = "../../index.html"; // Cambia "nueva_pagina.html" por la URL de la página a la que deseas redirigir
+    }, 5000); // 5000 milisegundos = 5 segundos
+  });
+

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/payment.css">
+    <link rel="stylesheet" href="../style/buy.css">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -12,7 +14,7 @@
       crossorigin="anonymous">
     <title>Fénix</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100 ">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-darky">
           <div class="container-fluid"> 
@@ -41,7 +43,7 @@
                           <a class="nav-link " href="./distributedBrands.html">Marcas Distibuídas</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="./paymentsTransfers.html">Pagos y Transferencias</a>
+                          <a class="nav-link" href="./paymentsTransfers.html">Medios de Pago</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link " href="./contact.html">Contacto</a>
@@ -51,64 +53,98 @@
           </div>
       </nav>
   </header>
-    <main>
-      <div class="card text-bg-dark">
-        <img src="/assets/img/fondo_card.png" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Como Comprar</h5>
-          <p class="card-text">Para coordinar la compra y asegurar el stock
-            para compras de varias unidades debe seguir las instrucciones:</p>
+    <main id="buyfondo" class="flex-grow-1 d-flex justify-content-center align-items-center">
+      <div class="row text-bg-black">
+       
+        <div class=" ">
+          <div class="container formulario">
+            <h5 class="card-title">Datos para despacho</h5>
+            <br>
+            
+            <h5 class="card-title">Nombre Completo</h5>
+            <div class="form-floating mb-3">
+              <input class="form-control " id="floatingInputDisabled"
+                placeholder="Ingrese su nombre completo" required="">
+              <label for="floatingInputDisabled">Ingrese su nombre completo aquí</label>
+            </div>
+            <h5 class="card-title">Número de teléfono</h5>
+            <div class="form-floating mb-3">
+              <input class="form-control" type="number" placeholder="Ej: +56987654321"
+                id="floatingInputDisabled" required=""></input>
+              <label for="floatingInputDisabled">Ingrese su número de contacto
+                aquí</label>
+            </div>
+            <h5 class="card-title">Correo Electrónico</h5>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputDisabled"
+                placeholder="name@example.com" required="">
+              <label for="floatingInputDisabled">Ingrese su correo electrónico</label>
+            </div>
+            <h5 class="card-title">Dirección</h5>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputDisabled"
+                placeholder="name@example.com" required="">
+              <label for="floatingInputDisabled">Ingrese su dirección aquí</label>
+            </div>
+          </div>
 
-          <li>Debe completar el siguiente formulario, asegurerse de ingresar los
-            datos de forma correcta y completa</li>
-          <li>Nos contactaremos con usted desde el correo ventas@fotofenix.com,
-            Foto Fénix no se contactará <br>ningúna otra dirección correo,
-            incluso de la misma compañia, para tratar ventas</li>
-          <li>Una vez confirmado el stock del producto meidiante un correo desde
-            ventas@fotofenix.com, se le <br>entregará un codigo de compra que
-            debe
-            adjuntar como comentario en la trasferencia o a través <br>de
-            nuestra
-            pasaréla de pago cuandos se le solicite</li>
-          <li>Confrimada la compra se hará envío del pedido, recibirá un correo
-            desde ventas@fotofenix.com <br>con el código y las instrucciones
-            para
-            realizar el seguimiento del pedido</li>
-          <br>
-          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-          <h5 class="card-title">Nombre Completo</h5>
-          <div class="form-floating mb-3">
-            <input class="form-control" id="floatingInputDisabled"
-              placeholder=" " disabled>
-            <label for="floatingInputDisabled">ingrese su nombre completo aquí</label>
-          </div>
-          <h5 class="card-title">Número de teléfono</h5>
-          <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here"
-              id="floatingTextareaDisabled" disabled></textarea>
-            <label for="floatingTextareaDisabled">ingrese su numero de contacto
-              aquí</label>
-          </div>
-          <h5 class="card-title">Correo Electrónico</h5>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInputDisabled"
-              placeholder="name@example.com" disabled>
-            <label for="floatingInputDisabled">correo electrónico</label>
-          </div>
-          <h5 class="card-title">Dirección</h5>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInputDisabled"
-              placeholder="name@example.com" disabled>
-            <label for="floatingInputDisabled">ingrese su dirección aquí</label>
-          </div>
-          <h5 class="card-title">Pedidos</h5>
-          <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here"
-              id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
-            <label for="floatingTextarea2Disabled">ingrese su pedido aquí</label>
+
+          <div class="container">
+            <div class="container">
+              <div class="row">
+                <div class="card-container">
+                  <div class="mastercard">
+                    <div class="logo"></div>
+                    <div class="name">masterplop</div>
+                  </div>
+                  <div class="card-details">
+                    <div class="card-number field">
+                      <label for="cn">Número de tarjeta</label>
+                      <input id="cn" type="text" />
+                    </div>
+                    <div class="card-name field">
+                      <label for="cna">Nombre en la tarjeta</label>
+                      <input id="cna" type="text" />
+                    </div>
+                    <div class="expires field">
+                      <label for="exp">Fecha Exp.</label>
+                      <input id="exp" type="text" />
+                      <br>
+                      <br>
+                    </div>
+                    <div class="cvc field">
+                      <label for="cvc">CVC</label>
+                      <input id="cvc" type="text" />
+                      <br>
+                      <br>
+                    </div>
+                   <div class="">
+                     <br>
+                   </div>
+                  </div>
+                  <button class="purchase-button" id="purchase-button" data-content="Comprar" data-bs-toggle="modal" data-bs-target="#pagorealizado">PURCHASE</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="pagorealizado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pagorealizadoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="pagorealizadoLabel">Pago realizado con exito!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  disabled></button>
+            </div>
+            <div class="modal-body">
+              Su compra ya está en camino!
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer class="bg-black text-white pt-4 pb-4 col-12">
       <div class="container">
@@ -161,6 +197,8 @@
           </div>
       </div>
   </footer>
+
+    
 
     <script src="/assets/js/logica.js"></script>
     <script
